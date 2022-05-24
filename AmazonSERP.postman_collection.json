@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "00c6ac34-402e-4e62-b308-9d8d58e12a5c",
+		"name": "AmazonSERP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJtZWRpY2FsX3NjcmVlbmluZ19hcHAiLCJleHAiOjE2MzYzMTA3MjIsInN1YiI6InVzZXIiLCJ1c2VyX2lkIjoyfQ.VGV5ZoYuz2PwgtFndo2Yb4laP5A-JiZF5uARyPk1dMA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						},
+						"description": "List of all products"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "serps",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJtZWRpY2FsX3NjcmVlbmluZ19hcHAiLCJleHAiOjE2MzYzMTA3MjIsInN1YiI6InVzZXIiLCJ1c2VyX2lkIjoyfQ.VGV5ZoYuz2PwgtFndo2Yb4laP5A-JiZF5uARyPk1dMA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/amazon_serps",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"amazon_serps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJtZWRpY2FsX3NjcmVlbmluZ19hcHAiLCJleHAiOjE2MzYzMTA3MjIsInN1YiI6InVzZXIiLCJ1c2VyX2lkIjoyfQ.VGV5ZoYuz2PwgtFndo2Yb4laP5A-JiZF5uARyPk1dMA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/amazon_serps/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"amazon_serps",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJtZWRpY2FsX3NjcmVlbmluZ19hcHAiLCJleHAiOjE2MzYzMTA3MjIsInN1YiI6InVzZXIiLCJ1c2VyX2lkIjoyfQ.VGV5ZoYuz2PwgtFndo2Yb4laP5A-JiZF5uARyPk1dMA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amazon_serp\": {\n        \"active\": true\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/amazon_serps/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"amazon_serps",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJtZWRpY2FsX3NjcmVlbmluZ19hcHAiLCJleHAiOjE2MzYzMTA3MjIsInN1YiI6InVzZXIiLCJ1c2VyX2lkIjoyfQ.VGV5ZoYuz2PwgtFndo2Yb4laP5A-JiZF5uARyPk1dMA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amazon_serp\": {\n        \"active\": true,\n        \"url\": \"https://www.amazon.com/s?k=mouse&ref=nb_sb_noss\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/amazon_serps",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"amazon_serps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJtZWRpY2FsX3NjcmVlbmluZ19hcHAiLCJleHAiOjE2MzYzMTA3MjIsInN1YiI6InVzZXIiLCJ1c2VyX2lkIjoyfQ.VGV5ZoYuz2PwgtFndo2Yb4laP5A-JiZF5uARyPk1dMA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/amazon_serps/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"amazon_serps",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "localhost:3000/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJtZWRpY2FsX3NjcmVlbmluZ19hcHAiLCJleHAiOjE2MzYyMjA5ODcsInN1YiI6InVzZXIiLCJ1c2VyX2lkIjozfQ.s9srVpQxqJ24HzMgMj2C2N2MK_7MAqTOi0Cv2y09NC0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"username\",\n    \"password\": \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

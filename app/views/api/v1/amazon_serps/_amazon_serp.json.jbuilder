@@ -1,0 +1,1 @@
+json.(amazon_serp, :id, :url, :active, :parsed_at)

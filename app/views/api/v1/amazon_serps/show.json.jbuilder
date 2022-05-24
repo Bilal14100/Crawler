@@ -1,0 +1,1 @@
+json.partial! "amazon_serp", amazon_serp: @amazon_serp
